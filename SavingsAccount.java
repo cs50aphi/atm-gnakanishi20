@@ -3,18 +3,19 @@ import java.util.ArrayList;
 
 public class SavingsAccount
 {
-    int startSaveBalance;
-    int SaveBalance;
-    public SavingsAccount()
+    int startSaveBalance = 0;
+    int SaveBalance = 0;
+    
+    public int SavingsAccount()
     {
-        startSaveBalance = 10;
-        SaveBalance = startSaveBalance;
+        return SaveBalance;
     }
     
-    public SavingsAccount(int pick)
+    public int SavingsAccount(int pick)
     {
         startSaveBalance = pick;
         SaveBalance= startSaveBalance;
+        return SaveBalance;
     }
     
     
@@ -30,8 +31,22 @@ public class SavingsAccount
         return SaveBalance;
     }
     
-    public int CheckBalSave()
+    public int SendSave(int move)
     {
+        SaveBalance -= move;
+        return SaveBalance;
+    }
+    
+    //receiving money from savings
+    public int ReceiveSave(int move)
+    {
+        SaveBalance += move;
+        return SaveBalance;
+    }
+    
+    public int interest()
+    {
+        SaveBalance *= 1.05;
         return SaveBalance;
     }
 }

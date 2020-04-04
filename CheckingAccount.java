@@ -5,16 +5,17 @@ public class CheckingAccount
 {
     int startBalance;
     int balance;
-    public CheckingAccount()
+    
+    public int CheckingAccount()
     {
-        startBalance = 10;
-        balance = startBalance;
+        return balance;
     }
     
-    public CheckingAccount(int pick)
+    public int CheckingAccount(int pick)
     {
         startBalance = pick;
         balance = startBalance;
+        return balance;
     }
     
     
@@ -30,8 +31,17 @@ public class CheckingAccount
         return balance;
     }
     
-    public int CheckBal()
+    //taking money from chekings to savings
+    public int SendCheck(int move)
     {
+        balance -= move;
+        return balance;
+    }
+    
+    //receiving money from savings
+    public int ReceiveCheck(int move)
+    {
+        balance += move;
         return balance;
     }
 }
