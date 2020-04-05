@@ -5,7 +5,7 @@ public class SavingsAccount
 {
     int startSaveBalance = 0;
     int SaveBalance = 0;
-    
+    //code to check amount of checking
     public int SavingsAccount()
     {
         return SaveBalance;
@@ -18,19 +18,19 @@ public class SavingsAccount
         return SaveBalance;
     }
     
-    
+    //code for withdraw
     public int SaveWithdraw(int take)
     {
         SaveBalance -= take;
         return SaveBalance;
     }
-    
+    //code for deposit
     public int SaveDeposit(int take)
     {
         SaveBalance += take;
         return SaveBalance;
     }
-    
+    //sends money to checkings
     public int SendSave(int move)
     {
         SaveBalance -= move;
@@ -43,7 +43,7 @@ public class SavingsAccount
         SaveBalance += move;
         return SaveBalance;
     }
-    
+    //calculates interest
     public int interest()
     {
         SaveBalance *= 1.05;

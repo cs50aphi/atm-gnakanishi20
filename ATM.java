@@ -33,6 +33,7 @@ public class ATM
             String name = kb.nextLine();
             String input = name.toLowerCase();
         
+            //makes sure that the imput is valid
             while(!checkBank.contains(input))
             {
                 System.out.println("Do you want to: (D)eposit, (W)ithdraw, (C)heck Balance, (T)ransfer, (Q)uit? Must enter either D, W, C, T, Q.");
@@ -41,6 +42,7 @@ public class ATM
                 input = name.toLowerCase();
             }
             
+            //code to check balance in each account
             if(input.equals("c"))
             {
                 int CheckBal = checking.CheckingAccount();
@@ -50,10 +52,12 @@ public class ATM
                 InterestCounter++; 
             }
             
+            //code to deposit in each account
             if(input.equals("d"))
             {
                 System.out.println("Deposit to: (1)Checkings or (2)Savings");
                 decision = kb.nextInt();
+                //makes sure there is a valid input
                 if(decision != 1 && decision != 2)
                 {
                     System.out.println("Deposit to: (1)Checkings or (2)Savings. Must enter either 1 or 2");
@@ -77,6 +81,7 @@ public class ATM
                 }
             }
             
+            //code for withdrawing money from each account
             if(input.equals("w"))
             {
                 System.out.println("Withdraw from: (1)Checkings or (2)Savings");
@@ -126,6 +131,7 @@ public class ATM
                 }
             }
             
+            //code for a transfer
             if(input.equals("t"))
             {
                 System.out.println("Transfer from: (1)Checkings to Savings or (2)Savings to Checkings.");
@@ -170,11 +176,13 @@ public class ATM
                 }
             }
             
+            //code for quitting 
             if(input.equals("q"))
             {
                 stop = true;
             }
             
+            //code that calculates the interest
             if(InterestCounter == 5)
             {
                 System.out.println();

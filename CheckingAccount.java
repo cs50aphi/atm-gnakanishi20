@@ -6,6 +6,7 @@ public class CheckingAccount
     int startBalance;
     int balance;
     
+    //checks balance
     public int CheckingAccount()
     {
         return balance;
@@ -18,13 +19,14 @@ public class CheckingAccount
         return balance;
     }
     
-    
+    //code used for deposit
     public int CheckingsDeposit(int take)
     {
         balance += take;
         return balance;
     }
     
+    //code used for withdraw
     public int CheckingsWithdraw(int take)
     {
         balance -= take;
