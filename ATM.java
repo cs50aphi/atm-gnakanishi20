@@ -31,7 +31,7 @@ public class ATM
         {
             System.out.println("Do you want to: (D)eposit, (W)ithdraw, (C)heck Balance, (T)ransfer, (Q)uit?");
             // String inputRow = kb.nextLine();
-            String name = kb.nextLine();
+            String name = kb.next();
             String input = name.toLowerCase();
         
             //makes sure that the imput is valid
