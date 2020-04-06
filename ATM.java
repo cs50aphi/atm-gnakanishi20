@@ -8,6 +8,7 @@ public class ATM
         CheckingAccount checking = new CheckingAccount();
         SavingsAccount savings = new SavingsAccount();
         
+        //initializing the min 10 in the account
         checking.CheckingAccount(10);
         savings.SavingsAccount(10);
         
